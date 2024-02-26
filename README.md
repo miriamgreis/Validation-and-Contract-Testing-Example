@@ -5,7 +5,16 @@ As sample API, we use the Swagger Petstore API.
 
 ## Validation
 
-TBD
+For validation, we use the tool Spectral. This tool vaildates a give OpenAPI file against a set of rules, which consist of the OpenAPI 2.x or 3.x schema and custom ones. Latter are defined in [custom-ruleset.yaml](./validation-web-service/src/openapi/custom-ruleset.yaml).
+
+### Execution
+
+Start the webservice with the following command in the `validation-web-service` directory:
+```
+yarn start
+```
+The service provides a generated SwaggerUi, which can be accessed via `http://localhost:3000/api 
+` and provides the option to upload an OpenAPI file for validation. An endpoint to publish an OpenAPI file is also available, but only for demonstration purposes.
 
 ## Contract Testing
 
