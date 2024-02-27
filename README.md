@@ -5,7 +5,19 @@ As sample API, we use the Swagger Petstore API.
 
 ## Validation
 
-TBD
+For validation, we use the tool Spectral. This tool validates a give OpenAPI file against a set of rules. These rules are derived from the OpenApi v2.0 and v3.x schema ([spectral:oas](https://docs.stoplight.io/docs/spectral/4dec24461f3af-open-api-rules)) and are extended with user-defined ones.
+Latter are defined in [custom-ruleset.yaml](./validation-web-service/src/openapi/custom-ruleset.yaml).
+
+The documentation for spectral custom rules can be found [here](https://docs.stoplight.io/docs/spectral/d3482ff0ccae9-rules).
+
+### Execution
+
+Start the webservice with the following command in the `validation-web-service` directory:
+```
+yarn start
+```
+The service provides a generated SwaggerUi, which can be accessed via `http://localhost:3000/api
+` and provides the option to upload an OpenAPI file for validation. An endpoint to publish an OpenAPI file is also available, but only for demonstration purposes.
 
 ## Contract Testing
 
