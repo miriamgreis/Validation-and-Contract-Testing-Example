@@ -72,7 +72,7 @@ Supported file type: yaml or yml.`,
     @UploadedFile(
       new ParseFilePipe({
         validators: [
-          new MaxFileSizeValidator({ maxSize: 50000 }),
+          new MaxFileSizeValidator({ maxSize: 100000 }),
           new FileTypeValidator({ fileType: /.(yaml|yml)$/ }),
         ],
       }),
@@ -131,7 +131,7 @@ Supported file type: yaml or yml.`,
     @UploadedFile(
       new ParseFilePipe({
         validators: [
-          new MaxFileSizeValidator({ maxSize: 10000 }),
+          new MaxFileSizeValidator({ maxSize: 100000 }),
           new FileTypeValidator({ fileType: /.(yaml|yml)$/ }),
         ],
       }),
