@@ -14,7 +14,8 @@ The documentation for spectral custom rules can be found [here](https://docs.sto
 
 Start the webservice with the following command in the `validation-web-service` directory:
 ```
-yarn start
+npm install
+npm run start
 ```
 The service provides a generated SwaggerUi, which can be accessed via `http://localhost:3000/api
 ` and provides the option to upload an OpenAPI file for validation. An endpoint to publish an OpenAPI file is also available, but only for demonstration purposes.
