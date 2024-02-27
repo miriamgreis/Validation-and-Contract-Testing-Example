@@ -129,7 +129,7 @@ You can add the configuration to the `globals` object.
 However, overwrites just work if the OpenAPI contains the respective security scheme which we want to overwite.
 
 For an API key, you might use the following snippet:
-```
+```json
 "securityOverwrites": {
     "apiKey": {
         "value": "<your-api-key"
@@ -138,7 +138,7 @@ For an API key, you might use the following snippet:
 ```
 
 For a Bearer token, you might use the following snippet:
-```
+```json
 "securityOverwrites": {
     "bearer": {
         "token": "<your-bearer-token>"
