@@ -1,0 +1,15 @@
+formats:
+  - oas3
+  - oas2
+extends:
+  - spectral:oas
+rules:
+  no-html-description:
+    description: Verifies that the 'description' attribute does not contain HTML
+    message: HTML tags detected in {{path}}, please use '&lt;' to escape < and '&gt;' for >, if you want to write HTML tags here.
+    given: "$..description"
+    severity: error
+    then:
+      function: pattern
+      functionOptions:
+        notMatch: <[^>]*>
